@@ -1,0 +1,22 @@
+{
+  "name": "gql_testedecontrato",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha testes/**/*.spec.js",
+    "test login": "mocha testes/login.spec.js",
+    "test category": "mocha testes/category.spec.js",
+    "test product": "mocha testes/product.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^11.7.1",
+    "pactum": "^3.8.0"
+  },
+  "dependencies": {
+    "pactum-flow-plugin": "^0.1.4"
+  }
+}
