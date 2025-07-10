@@ -19,9 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Subir Pactum flows com docker compose
-      #   run: docker-compose up -d
-
       - name: Rodar tests e gerar report
         run: npm run test
         continue-on-error: true
