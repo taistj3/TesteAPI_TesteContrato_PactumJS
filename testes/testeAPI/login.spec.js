@@ -19,7 +19,7 @@
 // }); 
 // import  gerarToken  from './helpers.js/authHelper.spec';
 
-const { gerarToken } = require('../helpers/authHelper');
+const { gerarToken } = require('../../helpers/authHelper');
 describe('Login', () => {
     it('fazer login com sucesso e exibir token', async () => {
         const token = await gerarToken('admin@admin.com', 'admin123')

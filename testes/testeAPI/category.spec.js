@@ -1,6 +1,6 @@
 const { spec } = require('pactum');
 const { setBaseUrl } = require('pactum/src/exports/request');
-const { gerarToken } = require('../helpers/authHelper');
+const { gerarToken } = require('../../helpers/authHelper');
 
 before(async () => {
   setBaseUrl('http://lojaebac.ebaconline.art.br');

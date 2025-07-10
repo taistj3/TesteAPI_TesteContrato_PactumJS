@@ -1,6 +1,9 @@
 const { spec } = require('pactum');
 const { setBaseUrl } = require('pactum/src/exports/request');
-const { gerarToken } = require('../helpers/authHelper');
+const { gerarToken } = require('../../helpers/authHelper');
+
+let token;
+let categoriaId;
 
 before(async () => {
     setBaseUrl('http://lojaebac.ebaconline.art.br');
@@ -54,6 +57,6 @@ it('Deve editar produto com sucesso', async () => {
 it('Deve excluir produto com sucesso', async () => {
     await spec()
         .delete(`/api/deleteProduct/${categoriaId}`)
-        .withHeaders('Authorization', `${token}`)
+        .withHeaders('Authorization',`${token}`)
         .expectStatus(200);
 }); 

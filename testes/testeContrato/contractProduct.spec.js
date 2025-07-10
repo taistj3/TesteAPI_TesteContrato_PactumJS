@@ -22,7 +22,11 @@ before(async () => {
 });
 
 after(async () => {
-    await reporter.end();
+    if (reporter && reporter.end) {
+    await reporter.end().catch(err => {
+        console.warn('Erro ao finalizar reporter:', err.message);
+    });
+    }
 });
 
 it('Front - Deve adicionar produto com sucesso', async () => {
